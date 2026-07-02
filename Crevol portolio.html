@@ -1,0 +1,523 @@
+
+<!-- saved from url=(0062)file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+.crevol-root {
+  --void: #0A0A0C;
+  --void-2: #121215;
+  --panel: rgba(246,243,236,0.035);
+  --panel-hover: rgba(246,243,236,0.06);
+  --line: rgba(246,243,236,0.10);
+  --bone: #F6F3EC;
+  --ink: rgba(246,243,236,0.68);
+  --ink-dim: rgba(246,243,236,0.42);
+  --create: #33B7B0;
+  --evolve: #E3A23D;
+  --dominate: #E14A34;
+  --grad: linear-gradient(90deg, var(--create), var(--evolve), var(--dominate));
+  font-family: 'Inter', sans-serif;
+  background: var(--void);
+  color: var(--bone);
+  position: relative;
+  overflow-x: hidden;
+}
+.crevol-root * { box-sizing: border-box; }
+.crevol-root .disp { font-family: 'Space Grotesk', sans-serif; }
+.crevol-root .mono { font-family: 'IBM Plex Mono', monospace; }
+
+.crevol-root .bg-glow {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(700px 500px at 12% 0%, rgba(51,183,176,0.10), transparent 60%),
+    radial-gradient(800px 600px at 88% 30%, rgba(225,74,52,0.10), transparent 60%),
+    radial-gradient(600px 500px at 50% 90%, rgba(227,162,61,0.07), transparent 60%);
+}
+
+.crevol-root section { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 96px 28px; }
+.crevol-root .eyebrow {
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--ink-dim); display: flex; align-items: center; gap: 10px;
+}
+.crevol-root .eyebrow::before { content:''; width: 18px; height: 1px; background: var(--grad); }
+.crevol-root h1, .crevol-root h2, .crevol-root h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+.crevol-root p { line-height: 1.7; color: var(--ink); margin: 0; }
+
+/* ---------- NAV ---------- */
+.crevol-root .nav {
+  position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 28px; backdrop-filter: blur(16px); background: rgba(10,10,12,0.65); border-bottom: 1px solid var(--line);
+}
+.crevol-root .nav-logo { font-family:'Space Grotesk'; font-weight:700; font-size: 15px; letter-spacing: 0.08em; display:flex; align-items:center; gap:8px;}
+.crevol-root .nav-logo .dot { width:7px; height:7px; border-radius:50%; background: var(--grad); }
+.crevol-root .nav-links { display:flex; gap: 28px; font-size: 13px; color: var(--ink-dim); }
+.crevol-root .nav-links a { color: inherit; text-decoration:none; transition: color .25s; }
+.crevol-root .nav-links a:hover { color: var(--bone); }
+.crevol-root .nav-cta { font-size: 12px; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--bone); text-decoration:none; white-space:nowrap; }
+@media (max-width: 720px){ .crevol-root .nav-links{ display:none; } }
+
+/* ---------- HERO ---------- */
+.crevol-root .hero { min-height: 92vh; display:flex; flex-direction:column; justify-content:center; padding-top: 60px; padding-bottom: 60px; }
+.crevol-root .badge {
+  display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); background: var(--panel);
+  padding: 7px 16px; border-radius: 999px; font-size: 11px; color: var(--ink); margin-bottom: 26px; width: fit-content;
+}
+.crevol-root .badge .pulse { width:6px; height:6px; border-radius:50%; background: var(--evolve); box-shadow: 0 0 0 0 rgba(227,162,61,.6); animation: pulse 2s infinite; }
+@keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(227,162,61,.5);} 70%{box-shadow:0 0 0 8px rgba(227,162,61,0);} 100%{box-shadow:0 0 0 0 rgba(227,162,61,0);} }
+.crevol-root .hero-word { font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 0.98; margin-bottom: 18px; }
+.crevol-root .hero-tagline { display:flex; flex-wrap:wrap; gap: 0 14px; font-family:'IBM Plex Mono'; font-size: clamp(12px,1.6vw,15px); letter-spacing: 0.28em; text-transform:uppercase; margin-bottom: 26px;}
+.crevol-root .hero-tagline span:nth-child(1){color:var(--create);}
+.crevol-root .hero-tagline span:nth-child(2){color:var(--evolve);}
+.crevol-root .hero-tagline span:nth-child(3){color:var(--dominate);}
+.crevol-root .hero-sub { max-width: 560px; font-size: 16px; margin-bottom: 36px; }
+.crevol-root .thread { height: 2px; width: 100%; max-width: 560px; border-radius: 2px; background: var(--grad); margin-bottom: 40px; opacity:.85; }
+.crevol-root .btn-primary {
+  display:inline-flex; align-items:center; gap:10px; background: var(--bone); color: var(--void); font-weight:600; font-size: 14px;
+  padding: 14px 26px; border-radius: 999px; text-decoration:none; transition: transform .25s ease, box-shadow .25s ease; width: fit-content;
+}
+.crevol-root .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+.crevol-root .hero-foot { margin-top: 56px; font-size: 12px; color: var(--ink-dim); }
+
+/* ---------- REVEAL ---------- */
+.crevol-root .reveal { opacity:0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.crevol-root .reveal.in { opacity:1; transform: translateY(0); }
+
+/* ---------- SECTION HEAD ---------- */
+.crevol-root .sec-head { max-width: 640px; margin: 0 auto 52px; text-align:center; }
+.crevol-root .sec-head h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin-top: 14px; }
+.crevol-root .sec-head p { margin-top: 14px; font-size: 15px; }
+
+/* ---------- ABOUT ---------- */
+.crevol-root .about-grid { display:grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; align-items: start; }
+@media (max-width: 860px){ .crevol-root .about-grid{ grid-template-columns: 1fr; } }
+.crevol-root .mv-card { border:1px solid var(--line); background: var(--panel); border-radius: 20px; padding: 26px; margin-bottom: 16px; }
+.crevol-root .mv-card .tag { font-family:'IBM Plex Mono'; font-size: 10px; letter-spacing:.25em; text-transform:uppercase; margin-bottom: 10px; display:block; }
+.crevol-root .mv-card.m .tag { color: var(--create); }
+.crevol-root .mv-card.v .tag { color: var(--dominate); }
+.crevol-root .about-copy h3 { font-size: 1.5rem; margin-bottom: 14px; }
+.crevol-root .about-copy p { margin-bottom: 14px; }
+.crevol-root .stat-row { display:grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 30px; }
+.crevol-root .stat-box { border:1px solid var(--line); background: var(--panel); border-radius: 16px; padding: 18px; text-align:center; }
+.crevol-root .stat-box .num { font-family:'Space Grotesk'; font-size: 1.8rem; font-weight:700; background: var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.crevol-root .stat-box .lbl { font-size: 11px; color: var(--ink-dim); margin-top: 6px; }
+
+.crevol-root .founder-note { display:flex; gap:14px; align-items:flex-start; margin-top: 26px; border-top:1px solid var(--line); padding-top: 22px;}
+.crevol-root .founder-note .fp { width:42px; height:42px; border-radius:50%; background: var(--grad); flex:none; }
+.crevol-root .founder-note .fn { font-size: 13px; font-weight:600; }
+.crevol-root .founder-note .ft { font-size: 12px; color: var(--ink-dim); }
+
+/* ---------- WHY CHOOSE ---------- */
+.crevol-root .why-grid { display:grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+@media (max-width: 720px){ .crevol-root .why-grid{ grid-template-columns:1fr; } }
+.crevol-root .why-item { display:flex; gap: 14px; border:1px solid var(--line); background: var(--panel); border-radius: 16px; padding: 18px 20px; align-items:flex-start; }
+.crevol-root .why-item .ico { width: 30px; height:30px; border-radius:9px; flex:none; display:flex; align-items:center; justify-content:center; background: var(--panel-hover); border:1px solid var(--line); color: var(--evolve); font-size:14px; }
+.crevol-root .why-item p { font-size: 14px; }
+
+/* ---------- PILLARS ---------- */
+.crevol-root .pillar {
+  border:1px solid var(--line); border-radius: 26px; background: linear-gradient(180deg, rgba(246,243,236,0.045), rgba(246,243,236,0.015));
+  padding: 40px; margin-bottom: 26px; position:relative; overflow:hidden;
+}
+.crevol-root .pillar::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; }
+.crevol-root .pillar.p1::before { background: var(--create); }
+.crevol-root .pillar.p2::before { background: linear-gradient(180deg, var(--create), var(--evolve)); }
+.crevol-root .pillar.p3::before { background: var(--evolve); }
+.crevol-root .pillar.p4::before { background: linear-gradient(180deg, var(--evolve), var(--dominate)); }
+.crevol-root .pillar-head { display:flex; align-items: baseline; gap: 18px; margin-bottom: 6px; flex-wrap:wrap; }
+.crevol-root .pillar-num { font-family:'IBM Plex Mono'; font-size: 13px; color: var(--ink-dim); letter-spacing: .1em; }
+.crevol-root .pillar-title { font-size: 1.5rem; }
+.crevol-root .pillar-role { font-size: 12px; color: var(--ink-dim); margin-bottom: 18px; font-style: italic;}
+.crevol-root .pillar-what { font-size: 14.5px; margin-bottom: 26px; max-width: 760px; }
+.crevol-root .kel-grid { display:grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-bottom: 22px; }
+@media (max-width: 760px){ .crevol-root .kel-grid{ grid-template-columns:1fr; } }
+.crevol-root .kel { border:1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(0,0,0,0.15); }
+.crevol-root .kel .kt { font-size: 13px; font-weight:600; margin-bottom: 4px; }
+.crevol-root .kel .kd { font-size: 12.5px; color: var(--ink-dim); line-height:1.55; }
+.crevol-root .apply {
+  border-left: 2px solid; border-radius: 0 14px 14px 0; padding: 16px 20px; font-size: 13.5px; color: var(--ink); background: rgba(255,255,255,0.02);
+}
+.crevol-root .pillar.p1 .apply, .crevol-root .pillar.p1 .pillar-num { border-color: var(--create); }
+.crevol-root .pillar.p2 .apply, .crevol-root .pillar.p2 .pillar-num { border-color: var(--evolve); }
+.crevol-root .pillar.p3 .apply, .crevol-root .pillar.p3 .pillar-num { border-color: var(--evolve); }
+.crevol-root .pillar.p4 .apply, .crevol-root .pillar.p4 .pillar-num { border-color: var(--dominate); }
+.crevol-root .apply b { color: var(--bone); }
+
+/* platform table */
+.crevol-root .platform-row { display:grid; grid-template-columns: 130px 1fr; gap: 14px; font-size: 13px; padding: 10px 0; border-top: 1px solid var(--line); }
+.crevol-root .platform-row:first-child { border-top: none; }
+.crevol-root .platform-row .pname { font-weight:600; color: var(--bone); }
+.crevol-root .platform-row .pfmt { color: var(--ink-dim); }
+.crevol-root .subblock { margin: 22px 0; padding: 18px 20px; border:1px dashed var(--line); border-radius: 14px; }
+.crevol-root .subblock .st { font-family:'IBM Plex Mono'; font-size: 10px; letter-spacing:.2em; text-transform:uppercase; color: var(--ink-dim); margin-bottom: 12px; }
+
+/* growth stages */
+.crevol-root .stage-row { display:flex; gap: 10px; flex-wrap: wrap; }
+.crevol-root .stage { flex:1; min-width: 130px; border:1px solid var(--line); border-radius: 12px; padding: 14px; background: rgba(0,0,0,0.15); }
+.crevol-root .stage .sn { font-family:'IBM Plex Mono'; font-size: 11px; color: var(--evolve); }
+.crevol-root .stage .st2 { font-weight:600; font-size: 13.5px; margin: 4px 0 4px; }
+.crevol-root .stage .sd { font-size: 12px; color: var(--ink-dim); }
+
+/* triggers grid */
+.crevol-root .trig-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+@media (max-width: 720px){ .crevol-root .trig-grid{ grid-template-columns: repeat(2,1fr); } }
+.crevol-root .trig { border:1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: rgba(0,0,0,0.15); }
+.crevol-root .trig .tn { font-weight:600; font-size: 13px; color: var(--dominate); }
+.crevol-root .trig .td { font-size: 11.5px; color: var(--ink-dim); margin-top: 2px; }
+
+/* ---------- METHOD ---------- */
+.crevol-root .method-list { display:flex; flex-direction:column; gap: 0; margin-bottom: 56px; }
+.crevol-root .method-row { display:grid; grid-template-columns: 210px 1fr; gap: 22px; padding: 20px 0; border-top: 1px solid var(--line); align-items:flex-start; }
+.crevol-root .method-row:first-child { border-top:none; }
+.crevol-root .method-pill { font-weight:600; font-size: 14px; }
+.crevol-root .method-row p { font-size: 13.5px; }
+@media (max-width: 640px){ .crevol-root .method-row{ grid-template-columns: 1fr; gap: 6px; } }
+
+.crevol-root .timeline { position:relative; padding-left: 4px; }
+.crevol-root .timeline-track { position:relative; display:flex; overflow-x:auto; gap: 0; padding-bottom: 8px; scrollbar-width: thin; }
+.crevol-root .tstep { flex: 1 0 128px; text-align:center; position:relative; padding: 0 6px; }
+.crevol-root .tstep .tline { height: 2px; background: var(--grad); position:absolute; top: 15px; left: -50%; right: 50%; z-index:0; }
+.crevol-root .tstep:first-child .tline { display:none; }
+.crevol-root .tdot { width: 30px; height:30px; border-radius:50%; border:1px solid var(--line); background: var(--void-2); display:flex; align-items:center; justify-content:center; margin: 0 auto 12px; position:relative; z-index:1; font-family:'IBM Plex Mono'; font-size:11px; color: var(--ink-dim); }
+.crevol-root .tlabel { font-size: 12px; font-weight: 600; }
+
+/* ---------- INDUSTRIES ---------- */
+.crevol-root .ind-wrap { display:flex; flex-wrap:wrap; gap: 10px; justify-content:center; }
+.crevol-root .ind-pill { border:1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 9px 18px; font-size: 13px; color: var(--ink); transition: .25s; }
+.crevol-root .ind-pill:hover { background: var(--panel-hover); color: var(--bone); border-color: rgba(246,243,236,.25); }
+
+/* ---------- TRUST ---------- */
+.crevol-root .trust-strip { display:flex; flex-wrap:wrap; gap: 10px; justify-content:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding: 26px 0; }
+.crevol-root .trust-chip { font-size: 12.5px; color: var(--ink); display:flex; align-items:center; gap:8px; }
+.crevol-root .trust-chip::before { content:'✦'; color: var(--evolve); font-size: 10px; }
+
+/* ---------- RESULTS PLACEHOLDER ---------- */
+.crevol-root .results-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+@media (max-width: 860px){ .crevol-root .results-grid{ grid-template-columns:1fr; } }
+.crevol-root .result-card { border:1px dashed rgba(246,243,236,0.22); border-radius: 18px; padding: 22px; min-height: 170px; display:flex; flex-direction:column; justify-content:space-between; background: rgba(255,255,255,0.015); }
+.crevol-root .result-card .rtag { font-family:'IBM Plex Mono'; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color: var(--evolve); border:1px solid rgba(227,162,61,0.35); padding: 4px 9px; border-radius:999px; width:fit-content; }
+.crevol-root .result-card .rtitle { font-size: 14px; font-weight:600; margin-top: 14px; color: var(--ink); }
+.crevol-root .result-card .rdesc { font-size: 12px; color: var(--ink-dim); margin-top: 8px; }
+.crevol-root .note-inline { font-size: 12px; color: var(--ink-dim); text-align:center; margin-top: 22px; }
+
+/* ---------- FOOTER ---------- */
+.crevol-root footer { border-top: 1px solid var(--line); padding: 90px 28px 50px; text-align:center; position:relative; z-index:1; }
+.crevol-root footer h2 { font-size: clamp(1.8rem,4vw,2.6rem); margin-bottom: 16px; }
+.crevol-root footer p { max-width: 480px; margin: 0 auto 30px; font-size:14px; }
+.crevol-root .foot-meta { margin-top: 50px; font-size: 12px; color: var(--ink-dim); display:flex; flex-direction:column; gap:6px; }
+.crevol-root .foot-meta b { color: var(--ink); }
+
+.crevol-root .legend { display:flex; justify-content:center; gap: 22px; margin-top: 18px; flex-wrap:wrap;}
+.crevol-root .legend span { font-family:'IBM Plex Mono'; font-size: 10px; letter-spacing:.15em; text-transform:uppercase; display:flex; align-items:center; gap:6px; color: var(--ink-dim); }
+.crevol-root .legend i { width:8px; height:8px; border-radius:50%; display:inline-block; }
+</style>
+
+</head><body><div class="crevol-root">
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-logo"><span class="dot"></span>CREVOL MEDIA</div>
+    <div class="nav-links">
+      <a href="file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html#about">About</a>
+      <a href="file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html#pillars">Pillars</a>
+      <a href="file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html#method">Method</a>
+      <a href="file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html#industries">Industries</a>
+      <a href="file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html#results">Results</a>
+    </div>
+    <a class="nav-cta" href="file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html#contact">Start a Project</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="badge"><span class="pulse"></span>Strategy-Led Digital Marketing Agency</div>
+    <h1 class="hero-word disp">CREVOL MEDIA</h1>
+    <div class="hero-tagline"><span>CREATE</span><span>· EVOLVE</span><span>· DOMINATE</span></div>
+    <div class="thread"></div>
+    <p class="hero-sub">We build brands, create content that resonates, grow loyal communities, and convert engaged audiences into paying customers — leading every campaign with strategy and measurable results, never guesswork.</p>
+    <a class="btn-primary" href="file:///C:/Users/Satya/Downloads/crevol-media-portfolio_1.html#pillars">See Our Method ↓</a>
+    <div class="hero-foot mono">CLIENT SERVICE GUIDE · CHARAN SRI SAI, FOUNDER &amp; CEO</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="reveal in">
+        <div class="mv-card m">
+          <span class="tag">Our Mission</span>
+          <p>To empower businesses to build authentic brands, create content that resonates, grow loyal communities, and convert engaged audiences into paying customers — by leading every campaign with strategy and measurable results, not guesswork.</p>
+        </div>
+        <div class="mv-card v">
+          <span class="tag">Our Vision</span>
+          <p>To become a globally trusted digital marketing partner, recognized for combining creative storytelling with data-driven strategy to help brands not just compete, but dominate their digital landscape and achieve sustainable, long-term growth.</p>
+        </div>
+      </div>
+      <div class="reveal about-copy in" style="transition-delay:.1s">
+        <span class="eyebrow">About Crevol Media</span>
+        <h3 style="margin-top:14px;">A strategy-led agency built to compound growth, not chase vanity metrics</h3>
+        <p>Crevol Media is a strategy-led digital marketing agency helping businesses build brands, create engaging content, grow communities, and convert audiences into paying customers.</p>
+        <p>Founded by Charan Sri Sai, a multidisciplinary creative with hands-on experience across design, content creation, photography, videography, and UI/UX, Crevol Media exists to deliver real, measurable growth — by first understanding your business, then building a strategy around it.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="num mono">04</div><div class="lbl">Integrated Service Pillars</div></div>
+          <div class="stat-box"><div class="num mono">08</div><div class="lbl">Stage Growth Process</div></div>
+          <div class="stat-box"><div class="num mono">09</div><div class="lbl">Industries Served</div></div>
+        </div>
+
+        <div class="founder-note">
+          <div class="fp"></div>
+          <div>
+            <div class="fn">Charan Sri Sai</div>
+            <div class="ft">Founder &amp; CEO, Crevol Media</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section id="why">
+    <div class="sec-head reveal in">
+      <span class="eyebrow" style="justify-content:center;">Why Choose Us</span>
+      <h2>Every engagement starts with research, not a template</h2>
+    </div>
+    <div class="why-grid reveal in">
+      <div class="why-item"><div class="ico">◆</div><p><b style="color:var(--bone)">Strategy before execution</b> — every campaign starts with research, not guesswork.</p></div>
+      <div class="why-item"><div class="ico">◆</div><p><b style="color:var(--bone)">Creative storytelling</b> that reflects your brand's true voice.</p></div>
+      <div class="why-item"><div class="ico">◆</div><p><b style="color:var(--bone)">Data-driven decisions</b> backed by measurable KPIs.</p></div>
+      <div class="why-item"><div class="ico">◆</div><p><b style="color:var(--bone)">Transparent reporting</b> at every stage of the engagement.</p></div>
+      <div class="why-item" style="grid-column: span 2;"><div class="ico">◆</div><p><b style="color:var(--bone)">A focus on long-term brand growth</b>, not short-term vanity metrics.</p></div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section id="pillars">
+    <div class="sec-head reveal in">
+      <span class="eyebrow" style="justify-content:center;">The Crevol Framework</span>
+      <h2>Four pillars, one growth cycle</h2>
+      <p>Planning, execution, community growth, and conversion — each pillar supports the others, forming a holistic approach that helps brands dominate their digital landscape.</p>
+    </div>
+
+    <!-- Pillar 01 -->
+    <div class="pillar p1 reveal in">
+      <div class="pillar-head"><span class="pillar-num mono">01 / STRATEGY</span><span class="pillar-title">Strategy Making</span></div>
+      <div class="pillar-role">The foundation of every successful digital marketing campaign</div>
+      <p class="pillar-what">Strategy Making defines clear business goals, analyzes the competitive landscape, and builds a structured roadmap to measurable outcomes. Without a solid strategy, every other marketing effort lacks direction and purpose.</p>
+      <div class="kel-grid">
+        <div class="kel"><div class="kt">SWOT Analysis</div><div class="kd">Evaluate Strengths, Weaknesses, Opportunities, and Threats to understand brand position.</div></div>
+        <div class="kel"><div class="kt">Target Audience</div><div class="kd">Define who you're speaking to: demographics, psychographics, pain points, behaviors.</div></div>
+        <div class="kel"><div class="kt">Competitor Analysis</div><div class="kd">Study what competitors do well and where the gaps exist in the market.</div></div>
+        <div class="kel"><div class="kt">KPI Setting</div><div class="kd">Establish measurable success metrics: reach, engagement rate, conversions, ROAS, CAC.</div></div>
+        <div class="kel"><div class="kt">Content Calendar</div><div class="kd">Plan what, when, and where to publish content across all digital platforms.</div></div>
+        <div class="kel"><div class="kt">Budget Allocation</div><div class="kd">Distribute budget across paid, organic, and influencer channels for maximum ROI.</div></div>
+      </div>
+      <div class="apply"><b>How Crevol Media applies this:</b> we build custom 30/60/90-day digital strategies for each client, combining market research, audience insights, and competitor benchmarking into a clear, actionable plan with measurable milestones.</div>
+    </div>
+
+    <!-- Pillar 02 -->
+    <div class="pillar p2 reveal in">
+      <div class="pillar-head"><span class="pillar-num mono">02 / CONTENT</span><span class="pillar-title">Content Creation</span></div>
+      <div class="pillar-role">Producing valuable content that attracts, engages, and converts</div>
+      <p class="pillar-what">Content Creation produces high-quality, platform-optimized material — videos, graphics, copywriting, and reels — that communicates a brand's message, builds trust, and drives audience action. Content is the fuel that powers every digital channel.</p>
+      <div class="kel-grid">
+        <div class="kel"><div class="kt">Copywriting</div><div class="kd">Persuasive headlines, captions, ad copy, and CTAs that compel the audience to act.</div></div>
+        <div class="kel"><div class="kt">Graphic Design</div><div class="kd">Branded visuals, carousels, infographics, and static posts aligned to brand identity.</div></div>
+        <div class="kel"><div class="kt">Video Production</div><div class="kd">Reels, shorts, explainer videos, testimonials, and behind-the-scenes content.</div></div>
+        <div class="kel"><div class="kt">Blog &amp; SEO Writing</div><div class="kd">Long-form, keyword-optimized articles that rank on Google and drive organic traffic.</div></div>
+        <div class="kel"><div class="kt">Story &amp; Reel Scripts</div><div class="kd">Short-form storytelling formats built for maximum engagement on Instagram and YouTube.</div></div>
+        <div class="kel"><div class="kt">UGC Coordination</div><div class="kd">Sourcing and curating user-generated content to build social proof authentically.</div></div>
+      </div>
+      <div class="subblock">
+        <div class="st">Content Formats by Platform</div>
+        <div class="platform-row"><div class="pname">Instagram</div><div class="pfmt">Reels · Stories · Carousels</div></div>
+        <div class="platform-row"><div class="pname">YouTube</div><div class="pfmt">Shorts · Long-form · Thumbnails</div></div>
+        <div class="platform-row"><div class="pname">LinkedIn</div><div class="pfmt">Articles · Posts · Case Studies</div></div>
+        <div class="platform-row"><div class="pname">Facebook</div><div class="pfmt">Videos · Groups · Events</div></div>
+        <div class="platform-row"><div class="pname">WhatsApp</div><div class="pfmt">Broadcasts · Status Updates</div></div>
+      </div>
+      <div class="apply"><b>How Crevol Media applies this:</b> we produce platform-specific content matched to each client's brand voice, audience expectations, and business goals — from concept and scripting to design, production, and publishing.</div>
+    </div>
+
+    <!-- Pillar 03 -->
+    <div class="pillar p3 reveal in">
+      <div class="pillar-head"><span class="pillar-num mono">03 / COMMUNITY</span><span class="pillar-title">Community Building</span></div>
+      <div class="pillar-role">Turning followers into loyal brand advocates and repeat customers</div>
+      <p class="pillar-what">Community Building strategically grows and nurtures a loyal audience. It goes beyond follower counts — creating emotional connection, brand loyalty, and organic word-of-mouth that significantly reduces dependence on paid advertising.</p>
+      <div class="kel-grid">
+        <div class="kel"><div class="kt">Engagement Strategy</div><div class="kd">Systematic replying, polling, Q&amp;As, and interactive content to build two-way conversations.</div></div>
+        <div class="kel"><div class="kt">Group Management</div><div class="kd">Creating and moderating WhatsApp, Telegram, or Discord communities for loyal customers.</div></div>
+        <div class="kel"><div class="kt">User-Generated Content</div><div class="kd">Encouraging followers to share their own posts, reviews, and experiences with the brand.</div></div>
+        <div class="kel"><div class="kt">Brand Loyalty Programs</div><div class="kd">Exclusive rewards, early access, and special offers for community members.</div></div>
+        <div class="kel"><div class="kt">Live Sessions &amp; Webinars</div><div class="kd">Real-time interaction through Instagram Lives, YouTube Lives, and online workshops.</div></div>
+        <div class="kel"><div class="kt">Ambassador Programs</div><div class="kd">Identifying and empowering top community members to represent the brand organically.</div></div>
+      </div>
+      <div class="subblock">
+        <div class="st">Community Growth Stages</div>
+        <div class="stage-row">
+          <div class="stage"><div class="sn">01</div><div class="st2">Attract</div><div class="sd">Draw in new audience</div></div>
+          <div class="stage"><div class="sn">02</div><div class="st2">Engage</div><div class="sd">Build meaningful connections</div></div>
+          <div class="stage"><div class="sn">03</div><div class="st2">Retain</div><div class="sd">Keep them coming back</div></div>
+          <div class="stage"><div class="sn">04</div><div class="st2">Advocate</div><div class="sd">Turn them into brand voices</div></div>
+        </div>
+      </div>
+      <div class="apply"><b>How Crevol Media applies this:</b> we build brand communities that reduce paid ad dependency, increase organic reach, and convert passive followers into active brand advocates who drive referrals and repeat business.</div>
+    </div>
+
+    <!-- Pillar 04 -->
+    <div class="pillar p4 reveal in">
+      <div class="pillar-head"><span class="pillar-num mono">04 / CONVERSION</span><span class="pillar-title">Influencing Decisions</span></div>
+      <div class="pillar-role">Using psychology and data to guide consumers toward action</div>
+      <p class="pillar-what">Influencing Decision Making applies consumer psychology, behavioral data, and persuasion technique to shape how potential customers think, feel, and ultimately choose — placing the right message at the right moment in the buyer's journey.</p>
+      <div class="kel-grid">
+        <div class="kel"><div class="kt">Consumer Psychology</div><div class="kd">Leveraging FOMO, social proof, scarcity, authority, and reciprocity to influence behavior.</div></div>
+        <div class="kel"><div class="kt">Buyer Journey Mapping</div><div class="kd">Guiding prospects through Awareness, Consideration, Decision, and Loyalty stages.</div></div>
+        <div class="kel"><div class="kt">Retargeting Strategies</div><div class="kd">Re-engaging warm audiences who've shown interest but haven't yet converted.</div></div>
+        <div class="kel"><div class="kt">Testimonials &amp; Case Studies</div><div class="kd">Trust-building content that reduces hesitation and validates the purchasing decision.</div></div>
+        <div class="kel"><div class="kt">CTA Optimization</div><div class="kd">Crafting the right call-to-action message for each stage of the buyer journey.</div></div>
+        <div class="kel"><div class="kt">A/B Testing</div><div class="kd">Testing different messaging, visuals, and offers to find what converts best.</div></div>
+      </div>
+      <div class="subblock">
+        <div class="st">Six Psychological Triggers in Marketing</div>
+        <div class="trig-grid">
+          <div class="trig"><div class="tn">Social Proof</div><div class="td">Reviews and ratings build trust</div></div>
+          <div class="trig"><div class="tn">Scarcity</div><div class="td">Limited offers create urgency</div></div>
+          <div class="trig"><div class="tn">Authority</div><div class="td">Expert voices drive credibility</div></div>
+          <div class="trig"><div class="tn">Reciprocity</div><div class="td">Give value first to receive</div></div>
+          <div class="trig"><div class="tn">Liking</div><div class="td">People buy from who they like</div></div>
+          <div class="trig"><div class="tn">Commitment</div><div class="td">Small yeses lead to big ones</div></div>
+        </div>
+      </div>
+      <div class="apply"><b>How Crevol Media applies this:</b> we use behavioral data and psychological persuasion frameworks to guide audiences from awareness to action — increasing conversion rates and reducing cost per acquisition for clients.</div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method">
+    <div class="sec-head reveal in">
+      <span class="eyebrow" style="justify-content:center;">The Crevol Method</span>
+      <h2>How the four pillars reinforce each other</h2>
+      <p>The real power of Crevol Media's approach is how these pillars connect — together forming a complete, self-sustaining digital marketing ecosystem.</p>
+    </div>
+
+    <div class="method-list reveal in">
+      <div class="method-row"><span class="method-pill" style="color:var(--create)">Strategy Making</span><p>Lays the foundation — sets direction, defines audiences, allocates resources, and establishes the KPIs that guide every other pillar.</p></div>
+      <div class="method-row"><span class="method-pill" style="color:var(--evolve)">Content Creation</span><p>Brings the strategy to life, executing through compelling visuals, copy, and video that speak directly to the defined audience.</p></div>
+      <div class="method-row"><span class="method-pill" style="color:var(--evolve)">Community Building</span><p>Amplifies the content — engaging the audience and creating loyal advocates who share, comment, and spread the brand organically.</p></div>
+      <div class="method-row"><span class="method-pill" style="color:var(--dominate)">Influencing Decisions</span><p>Converts the community — using psychological triggers and retargeting to turn engaged members into paying customers.</p></div>
+    </div>
+
+    <div class="sec-head reveal in" style="margin-bottom:36px;">
+      <span class="eyebrow" style="justify-content:center;">Our Process</span>
+      <h2 style="font-size:1.5rem;">Eight stages, one continuous loop</h2>
+    </div>
+    <div class="timeline reveal in">
+      <div class="timeline-track">
+        <div class="tstep"><div class="tline"></div><div class="tdot">01</div><div class="tlabel">Discovery</div></div>
+        <div class="tstep"><div class="tline"></div><div class="tdot">02</div><div class="tlabel">Research</div></div>
+        <div class="tstep"><div class="tline"></div><div class="tdot">03</div><div class="tlabel">Strategy</div></div>
+        <div class="tstep"><div class="tline"></div><div class="tdot">04</div><div class="tlabel">Content Production</div></div>
+        <div class="tstep"><div class="tline"></div><div class="tdot">05</div><div class="tlabel">Campaign Execution</div></div>
+        <div class="tstep"><div class="tline"></div><div class="tdot">06</div><div class="tlabel">Community Growth</div></div>
+        <div class="tstep"><div class="tline"></div><div class="tdot">07</div><div class="tlabel">Reporting</div></div>
+        <div class="tstep"><div class="tline"></div><div class="tdot">08</div><div class="tlabel">Optimization</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries">
+    <div class="sec-head reveal in">
+      <span class="eyebrow" style="justify-content:center;">Industries We Serve</span>
+      <h2>Built for brands, not just categories</h2>
+    </div>
+    <div class="ind-wrap reveal in">
+      <span class="ind-pill">Real Estate</span>
+      <span class="ind-pill">Healthcare</span>
+      <span class="ind-pill">Restaurants</span>
+      <span class="ind-pill">Education</span>
+      <span class="ind-pill">Retail</span>
+      <span class="ind-pill">E-commerce</span>
+      <span class="ind-pill">Startups</span>
+      <span class="ind-pill">Personal Brands</span>
+      <span class="ind-pill">Corporate Businesses</span>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section id="trust" style="padding-top:0;">
+    <div class="trust-strip reveal in">
+      <div class="trust-chip">Customized strategies</div>
+      <div class="trust-chip">Measurable results</div>
+      <div class="trust-chip">Creative excellence</div>
+      <div class="trust-chip">Consistent communication</div>
+      <div class="trust-chip">Continuous optimization</div>
+    </div>
+  </section>
+
+  <!-- RESULTS (placeholder / inferred) -->
+  <section id="results">
+    <div class="sec-head reveal in">
+      <span class="eyebrow" style="justify-content:center;">Results</span>
+      <h2>Case studies</h2>
+      <p>Slots reserved for real client outcomes — add names, metrics, and creative samples as engagements complete.</p>
+    </div>
+    <div class="results-grid reveal in">
+      <div class="result-card">
+        <span class="rtag">Slot 01 · Placeholder</span>
+        <div><div class="rtitle">Client name &amp; industry</div><div class="rdesc">Add campaign goal, timeframe, and headline metric (e.g., reach, ROAS, or conversion lift).</div></div>
+      </div>
+      <div class="result-card">
+        <span class="rtag">Slot 02 · Placeholder</span>
+        <div><div class="rtitle">Client name &amp; industry</div><div class="rdesc">Add campaign goal, timeframe, and headline metric (e.g., reach, ROAS, or conversion lift).</div></div>
+      </div>
+      <div class="result-card">
+        <span class="rtag">Slot 03 · Placeholder</span>
+        <div><div class="rtitle">Client name &amp; industry</div><div class="rdesc">Add campaign goal, timeframe, and headline metric (e.g., reach, ROAS, or conversion lift).</div></div>
+      </div>
+    </div>
+    <p class="note-inline">These three cards are structural placeholders, not real client data — swap in verified case studies before external distribution.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <span class="eyebrow" style="justify-content:center;">Get In Touch</span>
+    <h2 class="disp" style="margin-top:14px;">Let's Grow Your Brand</h2>
+    <p>Strategy, content, community, and conversion — built around your business, never a template.</p>
+    <a class="btn-primary" style="margin:0 auto;" href="https://crevolmedia.com/" target="_blank" rel="noopener noreferrer">Visit crevolmedia.com</a>
+
+    <div class="legend">
+      <span><i style="background:var(--create)"></i>Create</span>
+      <span><i style="background:var(--evolve)"></i>Evolve</span>
+      <span><i style="background:var(--dominate)"></i>Dominate</span>
+    </div>
+
+    <div class="foot-meta">
+      <div><b>Charan Sri Sai</b> — Founder &amp; CEO, Crevol Media</div>
+      <div>www.crevolmedia.com</div>
+      <div>© 2026 Crevol Media. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var root = document.currentScript.previousElementSibling;
+  var els = root.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function(el){ io.observe(el); });
+
+  root.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      var id = a.getAttribute('href').slice(1);
+      var target = root.querySelector('#'+id);
+      if (target) {
+        ev.preventDefault();
+        target.scrollIntoView({ behavior:'smooth', block:'start' });
+      }
+    });
+  });
+})();
+</script>
+</body></html>
